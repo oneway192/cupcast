@@ -1,0 +1,6 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+  <line x1="calc(50% - 350px)" y1="0" x2="calc(50% - 350px)" y2="100%" stroke="#442624" stroke-width="1" />
+  <line x1="50%" y1="0" x2="50%" y2="100%" stroke="#442624" stroke-width="1" />
+  <line x1="calc(50% + 350px)" y1="0" x2="calc(50% + 350px)" y2="100%" stroke="#442624" stroke-width="1" />
+</svg>

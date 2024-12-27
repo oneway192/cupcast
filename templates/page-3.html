@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/images/icon.svg" type="image/svg+xml">
+    <title>Прогноз продаж</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/fonts/font.css">
+</head>
+<body class="page-3">
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="../static/images/logo.svg" alt="Логотип">
+            </div>
+            <nav>
+                <a href="#" class="nav-link">О проекте</a>
+                <a href="#" class="nav-link">Команда</a>
+            </nav>
+        </div>
+    </header>
+    <main class="main page-3">
+        <div class="main-content">
+            <a href="{{ url_for('index') }}" class="nav-arrow">
+                <img src="../static/images/nav-arrow.svg" alt="Стрелка">
+                <span>На главную</span>
+            </a>            
+            <h1>Прогноз продаж на 7 дней</h1>
+
+            <div class="forecast-squares" id="predict-squares">
+                <div class="forecast-square">
+                    <h3 class="forecast-square-title">Наибольший спрос</h3>
+                    <p id="max-date">{{ result.max_date if result else '—' }}</p>
+                    <p id="max-value">Прогнозируемые продажи: {{ result.max_sales if result else '—' }}</p>
+                    <p class="forecast-square-text"><strong>Рекомендации:</strong> пополните запасы кофе накануне, проверьте устойчивость аппарата к нагрузке, попробуйте настроить ускорение времени обслуживания</p>
+                </div>
+                <div class="forecast-square">
+                    <h3 class="forecast-square-title">Наименьший спрос</h3>
+                    <p id="min-date">{{ result.min_date if result else '—' }}</p>
+                    <p id="min-value">Прогнозируемые продажи: {{ result.min_sales if result else '—' }}</p>
+                    <p class="forecast-square-text"><strong>Рекомендации:</strong> используйте этот день для ТО, разместите временную рекламу, проведите акцию “второй напиток за полцены”, добавьте в меню сезонные напитки</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section team-section">
+                <h2 class="footer-title">Команда</h2>
+                <ul class="team-list">
+                    <li>Яковенко Максим</li>
+                    <li>Скрыпник Михаил</li>
+                    <li>Провков Иван</li>
+                </ul>
+            </div>
+            <div class="footer-section contacts-section">
+                <h2 class="footer-title">Контакты</h2>
+                <ul class="contact-list">
+                    <li>@ykvnkm</li>
+                    <li>@mihask13</li>
+                    <li>@iprovkov</li>
+                </ul>
+            </div>
+            <div class="footer-logo">
+                <img src="../static/images/footer-logo.svg" alt="Логотип">
+            </div>
+            <p class="footer-text">© 2024 Cupcast.ru. Все права защищены</p>
+        </div>
+    </footer>
+</body>
+</html>

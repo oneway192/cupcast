@@ -1,0 +1,721 @@
+/* Обнуление стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+    width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+/* Стили для body */
+body.page-2 {
+    font-family: Arial, sans-serif;
+    background-color: #502E2C; /* Цвет фона */
+    padding: 0;
+    margin: 0;
+    background-image: url('..footer-logo/images/second-page-background.svg');
+    background-position: -50% top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.page-3, body.page-1 {
+    font-family: Arial, sans-serif;
+    background-color: #502E2C; /* Цвет фона */
+    padding: 0;
+    margin: 0;
+    background-image: url('../images/lines.svg');
+    background-position: 0% top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Стили для header */
+header {
+    background: #442624;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1366px;
+    padding: 0 103px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+}
+
+nav {
+    display: flex;
+    gap: 77px;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 28px;
+    letter-spacing: -1%;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link:active {
+    color: #F2E2C9;
+}
+
+/* Стили для main */
+main {
+    margin-top: 80px; /* Отступ сверху от хэдера */
+    flex: 1;
+    padding: 103px; /* Отступы по 103px с каждой стороны */
+}
+
+main.page-1 {
+    margin-top: 80px; /* Отступ сверху от хэдера */
+    flex: 1;
+    padding-top: 103px; /* Отступы по 103px с каждой стороны */
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.main-title {
+    font-family: 'Graphik LCG', sans-serif;
+    font-weight: bold;
+    font-size: 260px;
+    color: #F2E2C9;
+    letter-spacing: -10px;
+    padding-top: 0;
+    padding-left: 0;
+    text-align: center; /* Центрируем текст */
+}
+
+
+/* Стили для кнопки */
+.button-container {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.proceed-button {
+    background-color: #E19009;
+    border: 2px solid #E19009;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.proceed-button:hover, .proceed-button:active {
+    background-color: transparent;
+    color: #E19009;
+}
+
+.cover-info {
+    grid-column: 3 / 5;
+    padding-left: 50%;
+  }
+
+.cover-paragraph {
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: normal;
+    font-size: 28px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    padding-top: 27px;
+    text-align: left; /* Центрируем текст */
+  }
+  
+.section:last-child {
+    min-height: 700px;
+    margin-top: 200px;
+}
+
+.section-hard {
+    background-image: url(../images/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+.section-light {
+    margin-top: -60px;
+    margin-bottom: -60px;
+}
+
+#section-image-1 {
+    min-width: 300px;
+    position: absolute;
+    top: 375px;
+    left: 103px;
+    z-index: 1;
+    margin-bottom: 20px;
+  }
+
+#section-image-2 {
+    min-width: 300px;
+    position: absolute;
+    top: 1100px;
+    right: 73px;
+    z-index: 1;
+    margin-bottom: 20px;
+  }
+
+#section-image-3 {
+    max-width: 500px;
+    position: absolute;
+    top: 1800px;
+    left: 103px;
+    z-index: 1;
+    margin-bottom: 20px;
+  }
+
+#section-image-4 {
+    min-width: 300px;
+    position: absolute;
+    top: 2476px;
+    right: 73px;
+    z-index: 1;
+    margin-bottom: 20px;
+  }
+
+.upload {
+    display: flex; /* Используем Flexbox для выравнивания */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    justify-content: space-between; /* Распределяем элементы по горизонтали */
+}
+
+.more {
+    display: flex;
+    align-items: center;
+  }
+  
+.more-image {
+    align-items: center;
+    min-width: 45px;
+    min-height: 45px;
+    margin-top: 30px;
+  }
+
+
+.nav-arrow {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0; /* Сдвигаем стрелку и текст влево на 103px */
+    top: -150px; /* Поднимаем надписи прямо под хэдер */
+}
+
+.nav-arrow img {
+    width: 24px; /* Размер стрелки */
+    height: 24px;
+    margin-right: 10px;
+}
+
+.nav-arrow span {
+    color: #FFFFFF;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 32px;
+    letter-spacing: 0%;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    letter-spacing: 0%;
+    margin-bottom: 20px;
+    margin-top: -150px; /* Поднимаем надписи прямо под хэдер */
+}
+
+/* Секция "01" и "Прогноз продаж" */
+.forecast-section {
+    margin-top: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Выровнять элементы по верхнему краю */
+    width: 100%;
+    position: relative;
+}
+
+.forecast-number-right {
+    font-family: 'Graphik LCG', sans-serif;
+    font-weight: bold;
+    font-size: 290px;
+    color: #F2E2C9;
+    line-height: 1;
+    text-align: right;
+    margin-left: auto; /* Приклеивает к правому краю */
+}
+
+.forecast-title-left {
+    font-family: 'Graphik LCG', sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    color: #F2E2C9;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    text-align: left;
+    margin-right: auto; /* Приклеивает к левому краю */
+}
+
+.forecast-number-left {
+    font-family: 'Graphik LCG', sans-serif;
+    font-weight: bold;
+    font-size: 290px;
+    color: #F2E2C9;
+    line-height: 1;
+    text-align: left;
+    margin-right: auto; /* Приклеивает к правому краю */
+}
+
+.forecast-title-right {
+    font-family: 'Graphik LCG', sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    color: #F2E2C9;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    text-align: left;
+    margin-right: auto;
+}
+
+.forecast-title br {
+    display: block;
+    line-height: 0.1;
+}
+/* Прямоугольник */
+#predict-rectangle {
+    margin-top: -20px;
+    background-color: #442624;
+    height: 600px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#loss-rectangle {
+    margin-top: 20px;
+    background-color: #442624;
+    height: 600px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#describe-rectangle {
+    margin-top: 20px;
+    background-color: #442624;
+    height: 381px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#describe-rectangle {
+    background-color: #442624;
+    width: 100%;
+    border-radius: 5px;
+    color: #FFFFFF;
+    padding: 20px 44px; /* Отступы сверху и снизу 20px, слева и справа 44px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Выравнивание текста по вертикали */
+    font-family: 'SF Pro Display', sans-serif; /* Убедитесь, что шрифт подключен */
+    font-size: 24px;
+    text-align: left;
+    line-height: 1.4; /* Установка высоты строки для лучшего читаемости */
+}
+
+#describe-rectangle ul {
+    margin: 10px 0; /* Отступы для списка */
+    padding-left: 20px; /* Отступ слева для маркированного списка */
+}
+
+/* Два квадрата */
+#predict-squares {
+    display: flex;
+    /* justify-content: space-between; Автоматически выравниваем квадраты */
+    align-items: center; /* Центрируем по вертикали */
+    margin-top: 20px;
+    gap: 20px; /* Расстояние между квадратами */
+    width: 100%;
+}
+
+#loss-squares {
+    display: flex;
+    justify-content: space-between; /* Автоматически выравниваем квадраты */
+    align-items: center; /* Центрируем по вертикали */
+    margin-top: -20px;
+    gap: 20px; /* Расстояние между квадратами */
+    width: 100%;
+}
+
+#max-date, #min-date, #MAE {
+    padding-top: 72px;
+    padding-left: 44px;
+    padding-right: 44px;
+    color: #E19009;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: bold;
+    font-size: 64px;
+    text-align: center;
+}
+
+#max-value, #min-value, #MAE-def {
+    padding-left: 44px;
+    padding-right: 44px;
+    color: #E19009;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+}
+
+.forecast-squares {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.forecast-square {
+    justify-content: center; /* Центрируем содержимое по вертикали */
+    align-items: flex-start; /* Выравниваем содержимое по левому краю */
+    background-color: #442624; /* Пример цвета фона */
+    width: 520px; /* Ширина квадрата */
+    height: 520px; /* Высота квадрата */
+    border-radius: 5px; /* Скругление углов */
+}
+
+/* Основной текст */
+.forecast-square-text {
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 24px;
+    color: #FFFFFF;
+    padding-top: 78px;
+    padding-left: 44px;
+    padding-right: 44px;
+    text-align: left;
+}
+.forecast-square-title {
+    margin-top: 42px; /* Отступ текста сверху */
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+
+/* Стили для location-section */
+.location-section {
+    margin-top: 78px;
+    text-align: left;
+    width: 50%;
+}
+
+.inner-section {
+    margin-top: 2px;
+    text-align: left;
+    width: 50%;
+}
+
+.location-title {
+    color: #F2E2C9;
+    font-family: 'Graphik LCG', sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    letter-spacing: 0%;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.location-box {
+    border: 2px solid #F2E2C9;
+    border-radius: 5px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.choice-group {
+    display: flex;
+    align-items: center;
+    margin-right: 6px; /* Уменьшаем расстояние между группами в два раза */
+    padding-left: 24px;
+    cursor: pointer;
+}
+
+.choice-group:first-child {
+    padding-left: 0;
+}
+
+.choice-group:last-child {
+    margin-right: 0;
+}
+
+.choice-circle {
+    width: 24px;
+    height: 24px;
+    margin-right: 9px;
+    cursor: pointer;
+}
+
+.choice-text {
+    color: #FFFFFF;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.choice-text-accent {
+    max-width: 120px;
+}
+
+.input-box {
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.input-field {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0%;
+    width: 100%;
+    padding-left: 24px; /* Отступ слева, равный отступу левого кружка */
+    outline: none;
+    text-align: center;
+}
+
+.input-field::placeholder {
+    color: #FFFFFF;
+    opacity: 80%;
+}
+
+.input-field:focus,
+.input-field:not(:placeholder-shown) {
+    color: #F2E2C9;
+}
+
+.section-spacer {
+    height: 80px;
+}
+
+
+/* Стили для footer */
+footer {
+    background: #442624;
+    color: #fff;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-top: auto; /* Приклеиваем футер к низу */
+}
+
+.footer-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Блок "Команда" */
+.team-section {
+    position: absolute;
+    top: 53px; /* Отступ сверху */
+    left: 103px; /* Отступ слева */
+}
+
+.footer-title {
+    font-family: 'Graphik LCG', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: #F2E2C9;
+    margin-bottom: 45px;
+}
+
+.team-list {
+    list-style: none; /* Убираем маркеры */
+    padding: 0; /* Убираем отступы */
+}
+
+.team-list li {
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 28px;
+    color: #FFFFFF;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+/* Блок "Контакты" */
+.contacts-section {
+    position: absolute;
+    top: 53px; /* Отступ сверху */
+    left: 396px; /* Отступ слева */
+}
+
+.contact-list {
+    list-style: none; /* Убираем маркеры */
+    padding: 0; /* Убираем отступы */
+}
+
+.contact-list li {
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 28px;
+    color: #FFFFFF;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+/* Логотип в центре футера */
+.footer-logo {
+    position: absolute;
+    top: 53px; /* Отступ сверху */
+    left: 50%; /* Отступ слева */
+}
+
+.footer-logo img {
+    height: 100px;
+}
+
+/* Текст "© 2024 Cupcast.ru" */
+.footer-text {
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 28px;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 51px; /* Отступ снизу */
+    left: 50%; /* Отступ слева */
+}
+
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header, footer {
+        padding: 0;
+    }
+
+    .header-content {
+        padding: 0 10px;
+    }
+
+    .main-content {
+        background-image: none;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 20px;
+    }
+
+    .nav-arrow span {
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .location-title {
+        font-size: 36px;
+    }
+
+    .choice-text {
+        font-size: 24px;
+    }
+
+    .input-field {
+        font-size: 24px;
+    }
+
+    .proceed-button {
+        font-size: 24px;
+        padding: 10px 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-logo {
+        position: static;
+        transform: none;
+        margin: 20px 0;
+    }
+
+    .footer-text {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+    }
+}
+
+

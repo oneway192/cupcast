@@ -1,0 +1,88 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/images/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/fonts/font.css">
+    <title>Cupcast</title>
+</head>
+<body class="page-2">
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="../static/images/logo.svg" alt="Логотип">
+            </div>
+            <nav>
+                <a href="#" class="nav-link">О проекте</a>
+                <a href="#" class="nav-link">Команда</a>
+            </nav>
+        </div>
+    </header>
+    <main class="main page-2">
+        <div class="main-content">
+            <a href="{{ url_for('index') }}" class="nav-arrow">
+                <img src="../static/images/nav-arrow.svg" alt="Стрелка">
+                <span>На главную</span>
+            </a>            
+            <h1>Параметры кофейного автомата</h1>
+            <form action="/page-3" method="POST">
+                <div class="location-section">
+                    <h2 class="location-title">Локация</h2>
+                    <select name="location" required>
+                        <option value="Университет">Университет</option>
+                        <option value="Офис">Офис</option>
+                        <option value="Торговый центр">Торговый центр</option>
+                        <option value="Железнодорожный вокзал">Ж/Д вокзал</option>
+                        <option value="МФЦ">МФЦ</option>
+                    </select>
+                </div>
+                <div class="inner-section">
+                    <h2 class="location-title">Дневной поток людей около автомата</h2>
+                    <input type="number" name="daily_traffic" class="input-field" placeholder="Введите число..." required>
+                </div>
+                <div class="inner-section">
+                    <h2 class="location-title">Наружная реклама автомата</h2>
+                    <div>
+                        <label><input type="radio" name="is_advertised" value="1" required> Есть</label>
+                        <label><input type="radio" name="is_advertised" value="0" required> Нет</label>
+                    </div>
+                </div>
+                <div class="inner-section">
+                    <h2 class="location-title">Число видов кофе в ассортименте</h2>
+                    <input type="number" name="num_coffee_types" class="input-field" placeholder="Введите число..." required>
+                </div>
+                <div class="inner-section">
+                    <h2 class="location-title">Средняя цена за чашку</h2>
+                    <input type="number" name="average_price_per_cup" class="input-field" placeholder="Введите число..." required>
+                </div>
+                <button type="submit" class="proceed-button">Перейти к прогнозу</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section team-section">
+                <h2 class="footer-title">Команда</h2>
+                <ul class="team-list">
+                    <li>Яковенко Максим</li>
+                    <li>Скрыпник Михаил</li>
+                    <li>Провков Иван</li>
+                </ul>
+            </div>
+            <div class="footer-section contacts-section">
+                <h2 class="footer-title">Контакты</h2>
+                <ul class="contact-list">
+                    <li>@ykvnkm</li>
+                    <li>@mihask13</li>
+                    <li>@iprovkov</li>
+                </ul>
+            </div>
+            <div class="footer-logo">
+                <img src="../static/images/footer-logo.svg" alt="Логотип">
+            </div>
+            <p class="footer-text">© 2024 Cupcast.ru. Все права защищены</p>
+        </div>
+    </footer>
+</body>
+</html>

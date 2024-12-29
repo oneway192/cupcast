@@ -436,14 +436,8 @@ h1 {
 
 
 /* Стили для location-section */
-.location-section {
-    margin-top: 78px;
-    text-align: left;
-    width: 50%;
-}
-
 .inner-section {
-    margin-top: 2px;
+    margin-top: 40px;
     text-align: left;
     width: 100%;
 }

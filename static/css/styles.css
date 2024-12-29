@@ -162,12 +162,8 @@ main.page-1 {
     text-align: left; /* Центрируем текст */
   }
   
-.section:last-child {
-    min-height: 700px;
-    margin-top: 200px;
-}
-
 .section-hard {
+    position: relative;
     background-image: url(../images/background.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -175,8 +171,9 @@ main.page-1 {
   }
 
 .section-light {
-    margin-top: -60px;
-    margin-bottom: -60px;
+    position: relative;
+    min-height: 700px;
+
 }
 
 #section-image-1 {
@@ -189,31 +186,27 @@ main.page-1 {
   }
 
 #section-image-2 {
-    min-width: 300px;
+    max-width: 400px;
     position: absolute;
-    top: 1100px;
-    right: 73px;
-    z-index: 1;
-    margin-bottom: 20px;
+    bottom: 0;
+    right: 103px;
   }
 
 #section-image-3 {
-    max-width: 500px;
+    max-width: 400px;
     position: absolute;
-    top: 1800px;
+    bottom: 0;
     left: 103px;
-    z-index: 1;
-    margin-bottom: 20px;
+
   }
 
 #section-image-4 {
-    min-width: 300px;
+    max-width: 400px;
     position: absolute;
-    top: 2476px;
-    right: 73px;
-    z-index: 1;
-    margin-bottom: 20px;
+    bottom: 0;
+    right: 103px;
   }
+
 
 .upload {
     display: flex; /* Используем Flexbox для выравнивания */

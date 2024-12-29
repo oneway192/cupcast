@@ -11,12 +11,14 @@
 <body class="page-3">
     <header>
         <div class="header-content">
-            <div class="logo">
-                <img src="../static/images/logo.svg" alt="Логотип">
-            </div>
+            <a href="{{ url_for('index') }}">
+                <div class="logo">
+                    <img src="../static/images/logo.svg" alt="Логотип">
+                </div>
+            </a>
             <nav>
-                <a href="#" class="nav-link">О проекте</a>
-                <a href="#" class="nav-link">Команда</a>
+                <a href="{{ url_for('index') }}" class="nav-link">О проекте</a>
+                <a href="#footer" class="nav-link">Команда</a>
             </nav>
         </div>
     </header>
@@ -44,7 +46,7 @@
             </div>
         </div>
     </main>
-    <footer>
+    <footer id="footer">
         <div class="footer-content">
             <div class="footer-section team-section">
                 <h2 class="footer-title">Команда</h2>

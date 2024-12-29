@@ -7,7 +7,6 @@ from keras.saving import register_keras_serializable # type: ignore
 import tensorflow as tf
 from datetime import datetime, timedelta
 from sklearn.preprocessing import StandardScaler # type: ignore
-from random import randint
 
 # Регистрация кастомной функции потерь
 from tensorflow.keras.losses import MeanSquaredError # type: ignore
@@ -104,7 +103,7 @@ def page_3():
 
             # Предсказание с помощью модели
             prediction = model.predict(full_data_scaled)
-            prediction_list.append(int((prediction[0][0]) / 4 * randint(0.8, 1.3)))
+            prediction_list.append(int((prediction[0][0]) / 4))
 
         max_sales = np.max(prediction_list)
         min_sales = np.min(prediction_list)

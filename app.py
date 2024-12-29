@@ -113,7 +113,7 @@ def page_3():
         min_date = date_range[prediction_list.index(min_sales)].strftime("%d-%m-%Y")
 
         result = {
-            "max_date": prediction_list,
+            "max_date": max_date,
             "min_date": min_date,
             "max_sales": max_sales,
             "min_sales": min_sales

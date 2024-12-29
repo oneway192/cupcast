@@ -495,6 +495,17 @@ h1 {
     margin-right: 8px;
     cursor: pointer;
 }
+
+.choice-text {
+    color: #FFFFFF;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
 /* 
 .choice-form {
     color: #FFFFFF;

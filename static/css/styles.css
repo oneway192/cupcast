@@ -454,13 +454,33 @@ h1 {
 }
 
 .location-box {
-    border: 2px solid #F2E2C9;
-    border-radius: 5px;
-    padding: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
+    border: 2px solid #F2E2C9; /* Рамка */
+    border-radius: 5px; /* Скругление углов */
+    padding: 24px; /* Внутренние отступы */
+    display: flex; /* Flexbox для размещения контента */
+    align-items: center; /* Вертикальное выравнивание */
+    justify-content: center; /* Горизонтальное выравнивание */
+    box-sizing: border-box; /* Учитываем отступы и рамки */
+    width: 100%; /* Растягиваем блок на всю ширину */
+    background-color: #F2E2C9; /* Фон */
+    color: #502E2C; /* Цвет текста */
+    font-family: 'SF Pro Display', sans-serif; /* Шрифт */
+    font-weight: 400; /* Вес для Regular */
+    font-size: 16px; /* Размер текста */
+    letter-spacing: 0; /* Без межбуквенного расстояния */
+    text-align: left; /* Выравнивание текста по левому краю */
+    cursor: pointer; /* Указатель мыши */
+    position: relative; /* Для стрелочки */
+}
+
+/* Стиль для стрелочки внутри */
+.location-box::after {
+    content: '▼'; /* Символ стрелки */
+    position: absolute; /* Абсолютное позиционирование */
+    right: 16px; /* Отступ справа */
+    color: #502E2C; /* Цвет стрелки */
+    font-size: 16px; /* Размер стрелки */
+    font-family: 'SF Pro Display', sans-serif; /* Шрифт для стрелки */
 }
 
 .choice-group {

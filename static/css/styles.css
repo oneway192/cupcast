@@ -260,7 +260,6 @@ h1 {
 
 /* Секция "01" и "Прогноз продаж" */
 .forecast-section {
-    margin-top: 180px;
     display: flex;
     justify-content: space-between;
     align-items: center; /* Выровнять элементы по верхнему краю */

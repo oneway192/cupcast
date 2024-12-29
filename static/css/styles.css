@@ -134,16 +134,11 @@ main.page-1 {
 }
 
 .proceed-button {
-    background-color: #E19009;
-    border: 2px solid #E19009;
-    border-radius: 5px;
-    color: #FFFFFF;
-    font-family: 'SF Pro Display', sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    padding: 15px 30px;
+    all: unset;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 .proceed-button:hover, .proceed-button:active {

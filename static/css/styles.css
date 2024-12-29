@@ -21,12 +21,22 @@ a {
   white-space: nowrap;
 }
 
-html {
-    scroll-behavior: smooth;
+/* Стили для body */
+body.page-2 {
+    font-family: Arial, sans-serif;
+    background-color: #502E2C; /* Цвет фона */
+    padding: 0;
+    margin: 0;
+    background-image: url('..footer-logo/images/second-page-background.svg');
+    background-position: -50% top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Стили для body */
-body {
+body.page-3, body.page-1 {
     font-family: Arial, sans-serif;
     background-color: #502E2C; /* Цвет фона */
     padding: 0;
@@ -38,10 +48,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-form {
-    width: 100%;
 }
 
 
@@ -169,9 +175,13 @@ main.page-1 {
     padding-top: 27px;
     text-align: left; /* Центрируем текст */
   }
+  
+.section:last-child {
+    min-height: 700px;
+    margin-top: 200px;
+}
 
 .section-hard {
-    position: relative;
     background-image: url(../images/background.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -179,9 +189,8 @@ main.page-1 {
   }
 
 .section-light {
-    position: relative;
-    min-height: 700px;
-
+    margin-top: -60px;
+    margin-bottom: -60px;
 }
 
 #section-image-1 {
@@ -194,25 +203,30 @@ main.page-1 {
   }
 
 #section-image-2 {
-    max-width: 400px;
+    min-width: 300px;
     position: absolute;
-    bottom: 0;
-    right: 103px;
+    top: 1100px;
+    right: 73px;
+    z-index: 1;
+    margin-bottom: 20px;
   }
 
 #section-image-3 {
-    max-width: 400px;
+    max-width: 500px;
     position: absolute;
-    bottom: 0;
+    top: 1800px;
     left: 103px;
-
+    z-index: 1;
+    margin-bottom: 20px;
   }
 
 #section-image-4 {
-    max-width: 400px;
+    min-width: 300px;
     position: absolute;
-    bottom: 0;
-    right: 103px;
+    top: 2476px;
+    right: 73px;
+    z-index: 1;
+    margin-bottom: 20px;
   }
 
 .upload {
@@ -267,6 +281,7 @@ h1 {
 
 /* Секция "01" и "Прогноз продаж" */
 .forecast-section {
+    margin-top: 180px;
     display: flex;
     justify-content: space-between;
     align-items: center; /* Выровнять элементы по верхнему краю */
@@ -439,12 +454,17 @@ h1 {
 }
 
 
-/* Стили для формы */
+/* Стили для location-section */
+.location-section {
+    margin-top: 78px;
+    text-align: left;
+    width: 50%;
+}
 
 .inner-section {
-    margin-top: 40px;
+    margin-top: 2px;
     text-align: left;
-    width: 100%;
+    width: 50%;
 }
 
 .location-title {
@@ -458,10 +478,20 @@ h1 {
     text-align: center;
 }
 
-.choice-group {
-    display: block;
+.location-box {
+    border: 2px solid #F2E2C9;
+    border-radius: 5px;
+    padding: 24px;
+    display: flex;
     align-items: center;
-    margin-right: 16px; /* Уменьшаем расстояние между группами в два раза */
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.choice-group {
+    display: flex;
+    align-items: center;
+    margin-right: 6px; /* Уменьшаем расстояние между группами в два раза */
     padding-left: 24px;
     cursor: pointer;
 }
@@ -477,24 +507,18 @@ h1 {
 .choice-circle {
     width: 24px;
     height: 24px;
-    margin-right: 8px;
+    margin-right: 9px;
     cursor: pointer;
 }
 
-.choice-form {
+.choice-text {
     color: #FFFFFF;
     font-family: 'SF Pro Display', sans-serif;
     font-size: 28px;
     letter-spacing: 0;
-    display: flex;
+    display: block;
     text-align: center;
     cursor: pointer;
-    border: 2px solid #F2E2C9;
-    border-radius: 5px;
-    padding: 24px;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
 }
 
 .choice-text-accent {
@@ -508,6 +532,7 @@ h1 {
 
 .input-field {
     background: none;
+    border: none;
     color: #FFFFFF;
     font-family: 'SF Pro Display', sans-serif;
     font-size: 28px;
@@ -516,14 +541,6 @@ h1 {
     padding-left: 24px; /* Отступ слева, равный отступу левого кружка */
     outline: none;
     text-align: center;
-
-    border: 2px solid #F2E2C9;
-    border-radius: 5px;
-    padding: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
 }
 
 .input-field::placeholder {
@@ -699,6 +716,6 @@ footer {
         transform: none;
         margin-top: 20px;
     }
-}
+} 
 
 

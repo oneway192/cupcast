@@ -445,7 +445,7 @@ h1 {
 .inner-section {
     margin-top: 2px;
     text-align: left;
-    width: 50%;
+    width: 100%;
 }
 
 .location-title {
@@ -492,14 +492,20 @@ h1 {
     cursor: pointer;
 }
 
-.choice-text {
+.choice-form {
     color: #FFFFFF;
     font-family: 'SF Pro Display', sans-serif;
     font-size: 28px;
     letter-spacing: 0;
-    display: block;
+    display: flex;
     text-align: center;
     cursor: pointer;
+    border: 2px solid #F2E2C9;
+    border-radius: 5px;
+    padding: 24px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .choice-text-accent {

@@ -126,10 +126,6 @@ main.page-1 {
     text-align: center; /* Центрируем текст */
 }
 
-form {
-    width: 100%
-}
-
 /* Стили для кнопки */
 .button-container {
     margin-top: 35px;
@@ -476,7 +472,7 @@ h1 {
 .choice-group {
     display: flex;
     align-items: center;
-    margin-right: 16px; /* Уменьшаем расстояние между группами в два раза */
+    margin-right: 6px; /* Уменьшаем расстояние между группами в два раза */
     padding-left: 24px;
     cursor: pointer;
 }
@@ -492,7 +488,7 @@ h1 {
 .choice-circle {
     width: 24px;
     height: 24px;
-    margin-right: 8px;
+    margin-right: 9px;
     cursor: pointer;
 }
 
@@ -505,23 +501,6 @@ h1 {
     text-align: center;
     cursor: pointer;
 }
-
-/* 
-.choice-form {
-    color: #FFFFFF;
-    font-family: 'SF Pro Display', sans-serif;
-    font-size: 28px;
-    letter-spacing: 0;
-    display: flex;
-    text-align: center;
-    cursor: pointer;
-    border: 2px solid #F2E2C9;
-    border-radius: 5px;
-    padding: 24px;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-} */
 
 .choice-text-accent {
     max-width: 120px;

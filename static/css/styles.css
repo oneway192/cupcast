@@ -513,7 +513,6 @@ h1 {
 
 .input-field {
     background: none;
-    border: none;
     color: #FFFFFF;
     font-family: 'SF Pro Display', sans-serif;
     font-size: 28px;
@@ -522,6 +521,14 @@ h1 {
     padding-left: 24px; /* Отступ слева, равный отступу левого кружка */
     outline: none;
     text-align: center;
+
+    border: 2px solid #F2E2C9;
+    border-radius: 5px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .input-field::placeholder {

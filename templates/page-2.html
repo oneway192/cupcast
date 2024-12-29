@@ -10,12 +10,14 @@
 <body class="page-2">
     <header>
         <div class="header-content">
-            <div class="logo">
-                <img src="../static/images/logo.svg" alt="Логотип">
-            </div>
+            <a href="{{ url_for('index') }}">
+                <div class="logo">
+                    <img src="../static/images/logo.svg" alt="Логотип">
+                </div>
+            </a>
             <nav>
-                <a href="#" class="nav-link">О проекте</a>
-                <a href="#" class="nav-link">Команда</a>
+                <a href="{{ url_for('index') }}" class="nav-link">О проекте</a>
+                <a href="#footer" class="nav-link">Команда</a>
             </nav>
         </div>
     </header>
@@ -27,40 +29,40 @@
             </a>            
             <h1>Параметры кофейного автомата</h1>
             <form action="/page-3" method="POST">
-                <div class="location-section">
+                <div class="inner-section">
                     <h2 class="location-title">Локация</h2>
-                    <select name="location" required>
-                        <option value="Университет">Университет</option>
-                        <option value="Офис">Офис</option>
-                        <option value="Торговый центр">Торговый центр</option>
-                        <option value="Железнодорожный вокзал">Ж/Д вокзал</option>
-                        <option value="МФЦ">МФЦ</option>
-                    </select>
+                    <div class="choice-form">
+                        <label class="choice-group"><input class="choice-circle" type="radio" name="location" value="Университет" required> Университет</label>
+                        <label class="choice-group"><input class="choice-circle" type="radio" name="location" value="Офис" required> Офис</label>
+                        <label class="choice-group"><input class="choice-circle" type="radio" name="location" value="Торговый центр" required> Торговый центр</label>
+                        <label class="choice-group"><input class="choice-circle" type="radio" name="location" value="Ж/Д вокзал" required> Ж/Д вокзал</label>
+                        <label class="choice-group"><input class="choice-circle" type="radio" name="location" value="МФЦ" required> МФЦ</label>
+                    </div>
                 </div>
                 <div class="inner-section">
                     <h2 class="location-title">Дневной поток людей около автомата</h2>
-                    <input type="number" name="daily_traffic" class="input-field" placeholder="Введите число..." required>
+                    <input type="number" name="daily_traffic" class="input-field" placeholder="Введите число..." min="0" step="100" required>
                 </div>
                 <div class="inner-section">
                     <h2 class="location-title">Наружная реклама автомата</h2>
-                    <div>
-                        <label><input type="radio" name="is_advertised" value="1" required> Есть</label>
-                        <label><input type="radio" name="is_advertised" value="0" required> Нет</label>
+                    <div class="choice-form">
+                        <label class="choice-group" ><input class="choice-circle" type="radio" name="is_advertised" value="1" required> Есть</label>
+                        <label class="choice-group"><input class="choice-circle" type="radio" name="is_advertised" value="0" required> Нет</label>
                     </div>
                 </div>
                 <div class="inner-section">
                     <h2 class="location-title">Число видов кофе в ассортименте</h2>
-                    <input type="number" name="num_coffee_types" class="input-field" placeholder="Введите число..." required>
+                    <input type="number" name="num_coffee_types" class="input-field" placeholder="Введите число..." min="1" step="1" required>
                 </div>
                 <div class="inner-section">
-                    <h2 class="location-title">Средняя цена за чашку</h2>
-                    <input type="number" name="average_price_per_cup" class="input-field" placeholder="Введите число..." required>
+                    <h2 class="location-title">Средняя цена за чашку (в рублях)</h2>
+                    <input type="number" name="average_price_per_cup" class="input-field" placeholder="Введите число..." min="10" step="5" required>
                 </div>
-                <button type="submit" class="proceed-button">Перейти к прогнозу</button>
+                <button type="submit" class="proceed-button" style="margin-top: 40px;">Перейти к прогнозу</button>
             </form>
         </div>
     </main>
-    <footer>
+    <footer id="footer">
         <div class="footer-content">
             <div class="footer-section team-section">
                 <h2 class="footer-title">Команда</h2>

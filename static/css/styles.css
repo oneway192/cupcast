@@ -466,7 +466,7 @@ h1 {
     color: #502E2C; /* Цвет текста */
     font-family: 'SF Pro Display', sans-serif; /* Шрифт */
     font-weight: 400; /* Вес для Regular */
-    font-size: 16px; /* Размер текста */
+    font-size: 28px; /* Размер текста */
     letter-spacing: 0; /* Без межбуквенного расстояния */
     text-align: left; /* Выравнивание текста по левому краю */
     cursor: pointer; /* Указатель мыши */
@@ -477,9 +477,9 @@ h1 {
 .location-box::after {
     content: '▼'; /* Символ стрелки */
     position: absolute; /* Абсолютное позиционирование */
-    right: 16px; /* Отступ справа */
+    right: 24px; /* Отступ справа */
     color: #502E2C; /* Цвет стрелки */
-    font-size: 16px; /* Размер стрелки */
+    font-size: 28px; /* Размер стрелки */
     font-family: 'SF Pro Display', sans-serif; /* Шрифт для стрелки */
 }
 

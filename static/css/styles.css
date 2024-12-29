@@ -11,6 +11,10 @@ a {
     cursor: pointer;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .visually-hidden {
     clip: rect(0 0 0 0);
   clip-path: inset(50%);

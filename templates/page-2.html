@@ -31,17 +31,17 @@
             <form action="/page-3" method="POST">
                 <div class="inner-section">
                     <h2 class="location-title">Локация</h2>
-                    <div class="choice-form">
-                        <label class="choice-group"><input class="choice-circle" type="radio" name="location" value="Университет" required> Университет</label>
-                        <label class="choice-group"><input class="choice-circle" type="radio" name="location" value="Офис" required> Офис</label>
-                        <label class="choice-group"><input class="choice-circle" type="radio" name="location" value="Торговый центр" required> Торговый центр</label>
-                        <label class="choice-group"><input class="choice-circle" type="radio" name="location" value="Ж/Д вокзал" required> Ж/Д вокзал</label>
-                        <label class="choice-group"><input class="choice-circle" type="radio" name="location" value="МФЦ" required> МФЦ</label>
-                    </div>
+                    <select name="location" required>
+                        <option value="Университет">Университет</option>
+                        <option value="Офис">Офис</option>
+                        <option value="Торговый центр">Торговый центр</option>
+                        <option value="Железнодорожный вокзал">Ж/Д вокзал</option>
+                        <option value="МФЦ">МФЦ</option>
+                    </select>
                 </div>
                 <div class="inner-section">
                     <h2 class="location-title">Дневной поток людей около автомата</h2>
-                    <input type="number" name="daily_traffic" class="input-field" placeholder="Введите число..." min="0" step="100" required>
+                    <input type="number" name="daily_traffic" class="input-field" placeholder="Введите число..." min="0" step="1" required>
                 </div>
                 <div class="inner-section">
                     <h2 class="location-title">Наружная реклама автомата</h2>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="inner-section">
                     <h2 class="location-title">Средняя цена за чашку (в рублях)</h2>
-                    <input type="number" name="average_price_per_cup" class="input-field" placeholder="Введите число..." min="10" step="5" required>
+                    <input type="number" name="average_price_per_cup" class="input-field" placeholder="Введите число..." min="10" step="1" required>
                 </div>
                 <button type="submit" class="proceed-button" style="margin-top: 40px;">Перейти к прогнозу</button>
             </form>

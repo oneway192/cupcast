@@ -104,7 +104,7 @@ def page_3():
 
             # Предсказание с помощью модели
             prediction = model.predict(full_data_scaled)
-            prediction_list.append(int((prediction[0][0]) / 4 * randint(0.8, 1.3))
+            prediction_list.append(int((prediction[0][0]) / 4 * randint(0.8, 1.3)))
 
         max_sales = np.max(prediction_list)
         min_sales = np.min(prediction_list)
